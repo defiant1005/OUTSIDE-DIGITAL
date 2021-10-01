@@ -1,0 +1,70 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer; background-color: Transparent;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color: #DFE3E6;
+    height: 1px;
+}
+
+/*--------------------*/
+@font-face {
+    font-family: "Lab-Grotesque Regular";
+    src: local('../fonts/Lab Grotesque Regular'), local('Lab-Grotesque-Regular'),
+        url('../fonts/LabGrotesque-Regular.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Regular.woff') format('woff'),
+        url('../fonts/LabGrotesque-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lab-Grotesque Medium";
+    src: local('../fonts/Lab Grotesque Medium'), local('Lab-Grotesque-Medium'),
+        url('../fonts/LabGrotesque-Medium.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Medium.woff') format('woff'),
+        url('../fonts/LabGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Lab-Grotesque Light";
+    src: local('../fonts/Lab Grotesque Light'), local('Lab-Grotesque-Light'),
+        url('../fonts/LabGrotesque-Light.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Light.woff') format('woff'),
+        url('../fonts/LabGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

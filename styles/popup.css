@@ -1,0 +1,338 @@
+body.lock {
+    overflow: hidden;
+}
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    padding: 15px;
+}
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+.popup.open .popup__content {
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    opacity: 1;
+    z-index: 1000;
+}
+.popup__body {
+    min-height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.popup__content {
+    border-radius: 30px;
+    position: relative;
+    background-color: #fff;
+    color: black;
+    width: 552px;
+    padding: 32px;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    -webkit-transform: translate(0px, -100%);
+        -ms-transform: translate(0px, -100%);
+            transform: translate(0px, -100%);
+}
+.popup__title {
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.popup__close {
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    z-index: 3;
+    cursor: pointer;
+}
+.popup__paragraph {
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #808080;
+    margin-bottom: 24px;
+}
+.popup__form-pargraph {
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+.popup__form-inut {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #DFE3E6;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+}
+.pop_input::placeholder {
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #BEC5CC;
+}
+.pop_input[type="text"] {
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+}
+.popup__calculate-btn {
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #EA0029;
+    margin-bottom: 16px;
+    cursor: pointer;
+    display: block;
+    width: 76px;
+}
+.popup__calculate-paragraph {
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.form-checkbox {
+    margin: 16px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox-input {
+    display: none;
+}
+.checkbox-input:checked + .checkbox-label::after{
+    transform: scale(1);
+}
+.checkbox-label {
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.checkbox-label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    align-self: flex-start;
+    flex: 0 0 20px;
+    height: 20px;
+    margin: 0px 10px 0px 0px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3E6;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.checkbox-label::after {
+    content: "";
+    content: url("../img/done.svg");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    top: 0px;
+    left: 0px;
+    padding-left: 3px;
+    border-radius: 4px;
+    transform: scale(0);
+}
+
+.checkbox-span {
+    color: gray;
+}
+.form__question {
+    margin-top: 20px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+}
+.form__question-span {
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.form__question-btns {
+    width: 146px;
+    display: flex;
+    justify-content: space-between;
+}
+.form__question-payment {
+    width: 73px;
+    height: 36px;
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.form__question-term {
+    width: 57px;
+    height: 36px;
+    background: #EEF0F2;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lab-Grotesque Regular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+.form__submit {
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lab-Grotesque Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+.popup__br2 {
+    display: none;
+}
+.popup__br3 {
+    display: none;
+}
+
+@media (min-width: 453px) and (max-width: 552px) {
+    .popup__content {
+        width: 453px;
+    }
+    .popup__br1 {
+        display: none;
+    }
+    .popup__br2 {
+        display: block;
+    }
+}
+@media (min-width: 320px) and (max-width: 452px) {
+    .popup__content {
+        width: 320px;
+        padding: 32px 16px;
+    }
+    .popup__title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .popup__close {
+        right: 22px;
+        top: 22px;
+        width: 12px;
+        height: 12px;
+    }
+    .popup__paragraph {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .popup__br1 {
+        display: none;
+    }
+    .popup__br2 {
+        display: none;
+    }
+    .popup__br3 {
+        display: block;
+    }
+    .form__question {
+        margin-top: 24px;
+        width: 138px;
+        height: 84px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .form__question-btns {
+        width: 138px;
+    }
+}
+.popup__calculate-btn:hover {
+    color: #F53A31;
+}
+.popup__calculate-btn:active {
+    color: #EA0029;
+}
+.form__submit:hover {
+    background-color: #EA0029;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+}
+.form__submit:active {
+    background-color: #EA0029;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+}
+.checkbox-input:hover {
+    border: 1px solid #000000;
+}
+.checkbox-input:active {
+    border: 1px solid #000000;
+}
+.checkboxWrapper.open {
+    display: none;
+}
