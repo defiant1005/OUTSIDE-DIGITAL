@@ -1,5 +1,3 @@
-https://defiant1005.github.io/OUTSIDE-DIGITAL/
-
 # outside-digital
 
 ## Project setup
